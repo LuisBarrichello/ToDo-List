@@ -1,0 +1,24 @@
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    gap: 1.2rem;
+    padding: 8.2rem 0 5.5rem 0;
+}
+
+.logo {
+    width: 2.2rem;
+}
+
+.title {
+    color: var(--main-blue);
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.title span {
+    color: var(--main-orange);
+}

@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/task.css">
+    <link rel="stylesheet" href="./assets/css/input-new-task.css">
+    <link rel="stylesheet" href="./assets/css/layout-section-tasks.css">
     <title>Document</title>
 </head>
 <body>
     <header id="header">
-        <img src="./assets/img-svg/rocket.svg" alt="Logo de um foguete em forma de icone, azul com chamas em amarelo da propursão">
-        <h1 class="title">TODO</h1>
+        <img src="./assets/img-svg/rocket.svg" alt="Logo de um foguete em forma de icone, azul com chamas em amarelo da propursão" class="logo">
+        <h1 class="title">to<span>do</span></h1>
     </header>
     <main>
         <form action="">
             <input type="text" id="input-new-task" placeholder="Adicione uma nova tarefa">
-            <button>Criar <img src="./assets/img-svg/icon-add+.svg" alt="icon com simbolo mais para indicar adicionar uma nova tarefa"></button>
+            <button  class="button-new-task">Criar <img src="./assets/img-svg/icon-add+.svg" alt="icon com simbolo mais para indicar adicionar uma nova tarefa"></button>
         </form>
         <section id="section-tasks">
             <div class="data-today-filter">
-                <div>
+                <div class="today">
                     <span>Hoje</span>
-                    <span>Quinta</span>
-                    <span>22</span>
-                    <span>Set</span>
+                    <span class="day-today">Quinta</span>
+                    <span class="number-today">22</span>
+                    <span class="current-mounth">Set</span>
                 </div>
-                <div>
+                <button class="filter">
                     <img src="./assets/img-svg/icon-filter.svg" alt="icone de estilo mecanico para induzir o filtro">
                     <span>Filtros</span>
-                </div>
+                </button>
             </div>
             <div class="status-tasks">
                 <div>
@@ -35,19 +39,32 @@
                     <span>5</span>
                 </div>
                 <div>
-                    <span>Concluídas</span>
                     <div>
-                        <span>2</span>
-                        de
-                        <span>5</span>
+                        <span>Concluídas</span>
+                    </div>
+                    <div class="status-done-all">
+                        <span class="done">2</span>
+                        <span>de</span>
+                        <span class="all-tasks">5</span>
                     </div>
                 </div>
             </div>
             <div class="container-tasks">
                 <div class="task">
-                    <button></button>
-                    <p class="description-task">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                    <button><img src="./assets/img-svg/icon-trash.svg" alt="icone de lixo para indicar o atoa de deletar a tarefa"></button>
+                    <button class="button-task-todo">
+                        <img src="./assets/img-svg/circle-blue.svg" alt="circulo vazado, bordas azul, botao para clicar que concluiu a tarefa">
+                    </button>
+                    <p class="description-task">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+                    <button class="button-delete-task"><img src="./assets/img-svg/icon-trash.svg" alt="icone de lixo para indicar o atoa de deletar a tarefa"></button>
+                </div>
+                <div class="task done">
+                    <button class="button-task-done">
+                        <img src="./assets/img-svg/circle-purple-done.svg" alt="">
+                    </button>
+                    <p class="description-task done">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
+                    <button class="button-delete-task">
+                        <img src="./assets/img-svg/icon-trash.svg" alt="icone de lixo para indicar o atoa de deletar a tarefa">
+                    </button>
                 </div>
             </div>
         </section>

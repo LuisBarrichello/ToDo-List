@@ -1,0 +1,55 @@
+#section-tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.data-today-filter {
+    display: flex;
+    justify-content: space-between;
+
+    width: 65%;
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--main-blue);
+}
+
+.day-today, .number-today, .current-mounth {
+    color: var(--main-orange);
+}
+
+.filter {
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.status-tasks {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 65%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--main-blue);
+}
+
+.status-tasks div:nth-child(2) {
+    display: flex;
+}
+
+.status-done-all {
+    margin-left: .8rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .4rem;
+
+    font-size: 1.4rem;
+    background-color: var(--gray-400);
+    padding: 0 .8rem;
+    color: white;
+    border-radius: 999px;
+    background: var(--Gray-400, #333);
+}

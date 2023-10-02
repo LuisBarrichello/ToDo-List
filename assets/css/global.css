@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -12,10 +12,10 @@
 
     /* variaveis */
     --main-blue: #4EA8DE;
-    --main-yellow: #FFA500;
+    --main-orange: #FFA500;
     --main-purple: #8284FA;
     --main-black: #0D0D0D;
-    --gray-300: 808080;
+    --gray-300: #808080;
     --gray-400: #333333;
     --gray-500: #262626;
     --gray-600: #1A1A1A;
@@ -24,9 +24,13 @@
     --purple-dark: #5E60CE;
 }
 
+button, input {
+    all: unset;
+}
+
 body {
     font-size: 1.6rem;
-    background-color: var(--gray-500);
+    background-color: var(--gray-600);
     color: white;
     width: 99vw;
     min-height: 100vw;
