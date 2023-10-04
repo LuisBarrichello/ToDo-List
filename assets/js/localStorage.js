@@ -1,5 +1,6 @@
 import { Task } from "./classTask.js";
 import { loadTaskSaved } from "./createNewTask.js";
+import { completeTask } from "./completeTask.js";
 
 function saveLocalStorage(task) {
     return localStorage.setItem(`id ${Task.id}`, task.descriptionTask);
@@ -11,6 +12,7 @@ function loadTasksFromLocalStorage() {
         const value = localStorage.getItem(key);
 
         loadTaskSaved(value)
+        completeTask()
     }
 }
 

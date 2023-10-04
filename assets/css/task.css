@@ -35,6 +35,9 @@
 
 .button-task-checkbox, .button-delete-task {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button-delete-task {

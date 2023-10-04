@@ -41,6 +41,7 @@ form {
     background: var(--Blue-Dark, #1E6F9F);
 }
 
-.button-new-task:hover {
+.button-new-task:hover, .button-new-task:focus {
     background-color: #4EA8DE;
+    outline: .1px solid white;
 }
