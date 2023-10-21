@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100vh;
+}
+
+.container {
+    background: var(--Gray-500, #262626);
+    box-shadow: 0rem 0.2rem 0.8rem 0rem rgba(0, 0, 0, 0.06);
+
+    padding: 1.6rem;
+    width: 30%;
+    border-radius: 0.8rem;
+    border: 0.1rem solid var(--Gray-400, #333);
+}
+
+.field {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.field div {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    gap: .7rem;
+}
+
+.title-login {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 1.8rem;
+}
+
+label, input {
+    width: 100%;
+}
+
+input {
+    font-size: 1.6rem;
+}
+
+input::placeholder {
+    font-size: 1.6rem;
+    color: var(--gray-300);
+}
+
+#input-new-task:focus {
+    border-radius: 8px;
+    border: 1px solid var(--PurpleDark, #5E60CE);
+    background: var(--Gray-500, #262626);
+}
+
+.button-submit-form {
+    width: 30%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 0.8rem;
+    background: var(--blue-dark, #1E6F9F);
+    transition: .25s;
+}
+
+.button-submit-form:hover {
+    background: var(--main-blue);
+}
+
+.forgot-password {
+    text-decoration: none;
+    color: var(--color-words);
+    font-size: 1em;
+    margin: 2rem 0 2rem 0;
+    transition: .25s;
+}
+
+.forgot-password:hover {
+    color: var(--main-blue);
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        width: 50%;
+    }
+
+    .button-submit-form {
+        padding: 1.2rem 2.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 70%;
+    }
+
+    .button-submit-form {
+        padding: 1rem 2.5rem;
+    }
+}

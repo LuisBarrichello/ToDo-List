@@ -1,0 +1,56 @@
+#side-bar {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background-color: var(--gray-500);
+    height: 100vh;
+    width: 15%;
+    padding: 2.2rem;
+    transition: left 0.3s;
+}
+
+.user-image {
+    background-color: white;
+    border-radius: 999px;
+}
+
+.button-side-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: .5rem;
+    font-size: 2rem;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    border-radius: .5rem;
+}
+
+.button-side-bar:focus, .button-side-bar:hover {
+    background-color: var(--gray-400);
+}
+
+#data-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#data-user div {
+    gap: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.name-user {
+    font-size: 2.2rem;
+    font-weight: 700;
+}

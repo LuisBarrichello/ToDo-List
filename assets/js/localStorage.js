@@ -1,20 +1,40 @@
 import { Task } from "./classTask.js";
-import { loadTaskSaved } from "./createNewTask.js";
-import { completeTask } from "./completeTask.js";
+import { createBodyTask, getCurrentUser, loadTaskSaved } from "./createNewTask.js";
+import { completeTask, taskElementLineThroughWhitID } from "./completeTask.js";
+import { deleteTask } from "./deleteTask.js";
+import { editTask } from "./editTask.js";
+import { updateStatusTask } from "./updateStatus.js";
 
-function saveLocalStorage(task) {
-    return localStorage.setItem(`id ${Task.id}`, task.descriptionTask);
+function saveTaskLocalStorage(listTaskCurrentUser, user) {
+    return localStorage.setItem(`taskUser: ${user}`, listTaskCurrentUser);
 }
 
-function loadTasksFromLocalStorage() {
-    for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        const value = localStorage.getItem(key);
+async function loadTasksFromLocalStorage() {
+    const user = getCurrentUser();
+    const taskList = await getTaskListFromLocalStorage(user);
 
-        loadTaskSaved(value)
-        completeTask()
+    const CONTAINER_TASK = document.querySelector('.container-tasks');
+
+    CONTAINER_TASK.innerHTML = '';
+
+    for (const taskData of taskList) {
+        const task = new Task(taskData.descriptionTask, taskData.dueDate, taskData.priority, taskData.id);
+        const taskElement = createBodyTask(task.descriptionTask, task.dueDate, task.priority, task.id);
+        CONTAINER_TASK.appendChild(taskElement);
     }
+    completeTask()
+    deleteTask()
+    editTask()
+    updateStatusTask(taskList)
+    taskElementLineThroughWhitID(taskList)
 }
 
-export { saveLocalStorage, loadTasksFromLocalStorage }
+async function getTaskListFromLocalStorage(user) {
+    return new Promise((resolve, reject) => {
+        const taskList = JSON.parse(localStorage.getItem(`taskUser: ${user}`)) || [];
+        resolve(taskList);
+    });
+}
+
+export { saveTaskLocalStorage, loadTasksFromLocalStorage, getTaskListFromLocalStorage }
 

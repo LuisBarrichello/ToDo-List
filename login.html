@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/form-login.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <title>Login</title>
+</head>
+<body>
+    <header id="header">
+        <img src="./assets/img/rocket.svg" alt="Logo de um foguete em forma de icone, azul com chamas em amarelo da propursão" class="logo">
+        <h1 class="title">to<span>do</span></h1>
+    </header>
+    <main class="container">
+        <h4 class="title-login">Log in</h4>
+        <form class="field" id="login-form">
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Digite seu E-mail" required>
+            </div>
+
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="button-submit-form">Login</button>
+            <a href="#" target="_blank" class="forgot-password">Esqueceu sua senha?</a>
+        </form>
+    </main>
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>

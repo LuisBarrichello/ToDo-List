@@ -1,0 +1,37 @@
+.modal {
+    display: none;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--gray-400);
+    padding: 2.0rem;
+    border: .1rem solid var(--gray-300);
+    border-radius: 1.0rem;
+    box-shadow: 0 .2rem .4rem var(--gray-400);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.0rem;
+    right: 1.0rem;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    padding: .5rem;
+    border-radius: .2rem;
+}
+
+.close:hover, .close:focus {
+    background-color: rgb(242, 68, 68);
+}

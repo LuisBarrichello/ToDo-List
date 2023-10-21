@@ -16,7 +16,7 @@
     color: var(--main-blue);
 }
 
-.day-today, .number-today, .current-mounth {
+.day-today, .number-today, .current-month {
     color: var(--main-orange);
 }
 
@@ -52,4 +52,19 @@
     color: white;
     border-radius: 999px;
     background: var(--Gray-400, #333);
+}
+
+@media (min-width: 455px) and (max-width: 767px) {
+    .status-tasks {
+        font-size: 1.45rem;
+    }
+}
+
+@media (max-width: 454px) {
+    .status-tasks {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+    }
 }

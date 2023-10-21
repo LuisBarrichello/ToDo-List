@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/form-login.css"> 
+    <link rel="stylesheet" href="./assets/css/header.css"> 
+    <link rel="stylesheet" href="./assets/css/global.css"> 
+    <title>Registro</title>
+</head>
+<body>
+    <header id="header">
+        <img src="./assets/img/rocket.svg" alt="Logo de um foguete em forma de ícone, azul com chamas em amarelo de propulsão" class="logo">
+        <h1 class="title">to<span>do</span></h1>
+    </header>
+    <main class="container">
+        <h4 class="title-login">Registrar-se</h4>
+        <form class="field" id="register-form">
+            <div>
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" placeholder="Digite um Nome de Usuário" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" placeholder="Digite seu E-mail" required>
+            </div>
+
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" placeholder="Digite sua senha" required>
+            </div>
+            <button type="submit" class="button-submit-form">Registrar</button>
+            <a href="./login.html" target="_blank" class="forgot-password">Já possuí conta? Clique aqui</a>
+        </form>
+    </main>
+    <script type="module" src="./assets/js/register.js"></script>
+</body>
+</html>

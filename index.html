@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,67 +8,83 @@
     <link rel="stylesheet" href="./assets/css/task.css">
     <link rel="stylesheet" href="./assets/css/inputNewTask.css">
     <link rel="stylesheet" href="./assets/css/layoutSectionTasks.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/side-bar.css">
+    <title>Projeto Final</title>
 </head>
 <body>
     <header id="header">
-        <img src="./assets/img-svg/rocket.svg" alt="Logo de um foguete em forma de icone, azul com chamas em amarelo da propursão" class="logo">
+        <img src="./assets/img/rocket.svg" alt="Logo de um foguete em forma de icone, azul com chamas em amarelo da propursão" class="logo">
         <h1 class="title">to<span>do</span></h1>
+        <button class="button-side-bar"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M4 5.001h6v14H4z" opacity="0.2"></path><path fill="currentColor" fill-rule="evenodd" d="M5 4.001h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1H5Z" clip-rule="evenodd"></path></svg></button>
+        <nav id="side-bar">
+            <button class="close">&times;</button>
+            <div id="data-user">
+                <div>
+                    <img src="./assets/img/user.svg" alt="imagem do usuario" class="user-image">
+                    <span class="name-user">Name User</span>
+                </div>
+                <span class="email-user">email-user</span>
+            </div>
+        </nav>
     </header>
     <main>
-        <form action="">
+        <form action="" id="form-new-task">
+            <label for="input-new-task">Adicionar tarefa</label>
             <input type="text" id="input-new-task" placeholder="Adicione uma nova tarefa">
-            <button  class="button-new-task">Criar <img src="./assets/img-svg/icon-add+.svg" alt="icon com simbolo mais para indicar adicionar uma nova tarefa"></button>
+            <div>
+                <div>
+                    <label for="set-date">Data para finalizar:</label>
+                    <input type="date" name="" id="set-date" required>
+                </div>
+                <div>
+                    <label for="priority">Priority:</label>
+                    <select name="priority" id="priority" required>
+                        <option value="Priority 1">Priority 1</option>
+                        <option value="Priority 2">Priority 2</option>
+                        <option value="Priority 3">Priority 3</option>
+                        <option value="Priority 3">Priority 4</option>
+                    </select>                    
+                </div>
+            </div>
+            <button  class="button-new-task">Criar <img src="./assets/img/icon-add+.svg" alt="icon com simbolo mais para indicar adicionar uma nova tarefa"></button>
         </form>
         <section id="section-tasks">
             <div class="data-today-filter">
                 <div class="today">
                     <span>Hoje</span>
                     <span class="day-today">Quinta</span>
-                    <span class="number-today">22</span>
-                    <span class="current-mounth">Set</span>
+                    <span class="number-today">0</span>
+                    <span class="current-month">Set</span>
                 </div>
                 <button class="filter">
-                    <img src="./assets/img-svg/icon-filter.svg" alt="icone de estilo mecanico para induzir o filtro">
+                    <img src="./assets/img/icon-filter.svg" alt="icone de estilo mecanico para induzir o filtro">
                     <span>Filtros</span>
                 </button>
             </div>
             <div class="status-tasks">
                 <div>
                     <span>Tarefas criadas</span>
-                    <span>5</span>
+                    <span class="total-tasks-created">5</span>
                 </div>
                 <div>
                     <div>
                         <span>Concluídas</span>
                     </div>
                     <div class="status-done-all">
-                        <span class="done">2</span>
+                        <span class="total-tasks-completed">2</span>
                         <span>de</span>
-                        <span class="all-tasks">5</span>
+                        <span class="total-tasks-created">5</span>
                     </div>
                 </div>
             </div>
             <div class="container-tasks">
-                <div class="task">
-                    <button class="button-task-checkbox">
-                        <img src="./assets/img-svg/circle-blue.svg" alt="circulo vazado, bordas azul, botao para clicar que concluiu a tarefa">
-                    </button>
-                    <p class="description-task">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                    <button class="button-delete-task"><img src="./assets/img-svg/icon-trash.svg" alt="icone de lixo para indicar o atoa de deletar a tarefa"></button>
-                </div>
-                <div class="task done">
-                    <button class="button-task-checkbox">
-                        <img src="./assets/img-svg/circle-purple-done.svg" alt="">
-                    </button>
-                    <p class="description-task done">Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
-                    <button class="button-delete-task">
-                        <img src="./assets/img-svg/icon-trash.svg" alt="icone de lixo para indicar o atoa de deletar a tarefa">
-                    </button>
-                </div>
+                <!-- TASK HERE -->
             </div>
         </section>
     </main>
+    <script src="./assets/js/statusDayFront.js"></script>
+    <script type="module" src="./assets/js/nav.js"></script>
     <script type="module" src="./assets/js/createNewTask.js"></script>
 </body>
 </html>
